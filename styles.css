@@ -1,0 +1,299 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #462f27;
+}
+
+/* Header estilos */
+header {
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 2px solid #8f1e3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #8f1e3a;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #462f27;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #8f1e3a;
+}
+
+/* Hero Section estilos */
+#hero {
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+#hero img {
+    width: 100%;
+    height: auto;
+}
+
+#hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-weight: bold;
+    max-width: 600px;
+}
+
+/* Sabores del Día estilos */
+#sabores {
+    background-color: #ffff6a;
+    color: #462f27;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#sabores h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#sabores ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sabores li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Promociones estilos */
+#promociones {
+    background-color: #462f27;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#promociones h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#promociones ul {
+    list-style: none;
+    padding: 0;
+}
+
+#promociones li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Nosotros estilos */
+#nosotros {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#nosotros h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#nosotros p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Beneficios y Ventajas estilos */
+#beneficios {
+    background-color: #ffff6a;
+    color: #462f27;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#beneficios h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#beneficios p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+#beneficios ul {
+    list-style: none;
+    padding: 0;
+}
+
+#beneficios li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Sucursales estilos */
+#sucursales {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#sucursales h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#sucursales ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sucursales li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Contacto estilos */
+#contacto {
+    background-color: #462f27;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#contacto h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#contacto form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contacto label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#contacto input,
+#contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+#contacto button {
+    background-color: #ffff6a;
+    color: #462f27;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+#contacto button:hover {
+    background-color: #8f1e3a;
+}
+
+.informacion-contacto {
+    margin-top: 30px;
+}
+
+.informacion-contacto p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Footer estilos */
+footer {
+    background-color: #462f27;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.iconos a {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.iconos img {
+    width: 40px;
+    height: 40px;
+}
+
+.informacion-adicional {
+    margin-top: 20px;
+}
+
+.informacion-adicional p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .iconos a {
+        margin: 0 10px;
+    }
+}
