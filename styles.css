@@ -1,299 +1,894 @@
-/* Estilos generales */
-body {
-    font-family: 'Arial', sans-serif;
+/* Reset de estilos y ajustes generales */
+body, h1, h2, h3, p, ul, li, figure, figcaption, div, a, form, input, textarea, button {
     margin: 0;
     padding: 0;
-    background-color: #fff;
-    color: #462f27;
-}
-
-/* Header estilos */
-header {
-    background-color: #fff;
-    padding: 20px;
-    border-bottom: 2px solid #8f1e3a;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    background-color: #f8f8f8;
+  }
+  
+/* Estilos para el Header */
+.header {
+    background-color: #8f1e3a;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .top-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo {
-    color: #8f1e3a;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo-container {
     display: flex;
-}
+    align-items: center;
+  }
+  
+  .logo {
+    max-height: 95px; /* Ajusta según el tamaño del logo */
+    border-radius: 30px;
+  }
+  
+  .contact-info,
+  .social-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-item {
+    margin-left: 20px;
+    font-size: 20px;
+  }
 
-nav ul {
+  .social-icons a {
+    margin-left: 20px;
+    font-size: 30px;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #55a585;
+  }
+  
+  .main-nav {
+    margin-top: 24px;
+  }
+  
+  .main-nav ul {
     list-style: none;
     display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    margin-right: 20px;
-}
-
-nav a {
+  }
+  
+  .main-nav a {
     text-decoration: none;
-    color: #462f27;
-    font-weight: bold;
-    font-size: 16px;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #8f1e3a;
-}
-
-/* Hero Section estilos */
-#hero {
-    position: relative;
-    text-align: center;
     color: #fff;
+    font-weight: bold;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+    padding-right: 5px;
+  }
+  
+  .main-nav a i {
+    margin-right: 8px;
+    font-size: 18px;
+  }
+  
+  .main-nav a:hover {
+    color: #55a585;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .top-bar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .logo {
+      margin-bottom: 10px;
+    }
+  
+    .contact-info,
+    .social-icons {
+      margin-top: 10px;
+    }
+  
+    .contact-item,
+    .social-icons a {
+      margin-left: 15px;
+    }
+  
+    .main-nav {
+      margin-top: 20px;
+      text-align: center;
+    }
+  
+    .main-nav ul {
+      flex-direction: column;
+    }
+  
+    .main-nav a {
+      margin: 10px 0;
+    }
+  }
+  
+  
+/* Estilos para la Sección de Inicio */
+.intro-section {
+    background-color: #f8f8f8;
+    color: #333;
+    text-align: center;
+    padding: 80px 0;
+  }
+  
+  .header-banner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .header-banner h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #8f1e3a;
+  }
+  
+  .header-banner p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #55a585;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #8f1e3a;
+  }
+  
+  
+  /* Estilos para la Sección de Banner */
+  .banner-section {
+    background: url(banner.png) center/cover;
+    height: 110vh;
 }
-
-#hero img {
-    width: 100%;
-    height: auto;
-}
-
-#hero h1 {
-    position: absolute;
+  
+/* Estilos para la Sección de Sabores */
+#sabores {
+    background-color: #ffe6e6; /* Color de fondo más claro */
+    padding: 80px 0;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #8f1e3a;
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .flavor-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .flavor {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Añadido el efecto de sombra al hover */
+  }
+  
+  .flavor img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .flavor p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .buy-button {
+    background-color: #8f1e3a;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .buy-button:hover {
+    background-color: #55a585;
+  }
+  
+  /* Agregamos estilos para el formulario (inicialmente oculto) */
+  .order-form {
+    display: none;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+  }
+  
+  .order-form h3 {
+    text-align: center;
+    color: #8f1e3a;
+  }
+  
+  .order-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .order-form label {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .order-form input {
+    margin-top: 5px;
+    padding: 8px;
+  }
+  
+  .order-form button {
+    margin-top: 15px;
+    background-color: #55a585;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .order-form button:hover {
+    background-color: #8f1e3a;
+  }
+
+  /* Estilos para el botón de cerrar */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+  }
+
+  /* Estilos mejorados para la Sección Nosotros */
+/* Estilos mejorados y vistosos para la Sección Nuestra Historia */
+#historia {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #8f1e3a;
     font-size: 36px;
-    font-weight: bold;
-    max-width: 600px;
-}
-
-/* Sabores del Día estilos */
-#sabores {
-    background-color: #ffff6a;
-    color: #462f27;
-    padding: 50px 0;
+    margin-bottom: 40px;
+    font-style: italic;
+  }
+  
+  .history-section {
     text-align: center;
-}
+  }
+  
+  .story {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    font-style: oblique;
 
-#sabores h2 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-#sabores ul {
-    list-style: none;
-    padding: 0;
-}
-
-#sabores li {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-/* Promociones estilos */
-#promociones {
-    background-color: #462f27;
-    color: #fff;
-    padding: 50px 0;
-    text-align: center;
-}
-
-#promociones h2 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-#promociones ul {
-    list-style: none;
-    padding: 0;
-}
-
-#promociones li {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-/* Nosotros estilos */
-#nosotros {
-    padding: 50px 0;
-    text-align: center;
-}
-
-#nosotros h2 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-#nosotros p {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-/* Beneficios y Ventajas estilos */
-#beneficios {
-    background-color: #ffff6a;
-    color: #462f27;
-    padding: 50px 0;
-    text-align: center;
-}
-
-#beneficios h2 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-#beneficios p {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-#beneficios ul {
-    list-style: none;
-    padding: 0;
-}
-
-#beneficios li {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-/* Sucursales estilos */
+  }
+  
+  .story-image {
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .story-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .story-description {
+    width: 50%;
+    text-align: left;
+  }
+  
+  .story-description p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    animation: sparkle 2.5s infinite alternate;
+  }
+  
+  @keyframes sparkle {
+    from {
+      color: #555;
+      text-shadow: none;
+    }
+    to {
+      color: #6200ff;
+      text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 15px #ffcc00;
+    }
+  }
+  
+  /* Estilos específicos para cada historia */
+  .founders-image {
+    order: 1;
+  }
+  
+  .founders-description {
+    order: 2;
+  }
+  
+  .post-earthquake-image {
+    order: 2;
+  }
+  
+  .post-earthquake-description {
+    order: 1;
+  }
+  
+  .interview-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .interview-video iframe {
+    width: 60%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilos para la Sección Nuestras Sucursales */
 #sucursales {
-    padding: 50px 0;
+    background-color: #fff;
+    padding: 80px 0;
+  }
+  
+  h2 {
     text-align: center;
-}
-
-#sucursales h2 {
-    font-size: 32px;
-    font-weight: bold;
+    color: #8f1e3a;
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .locations-section {
+    text-align: center;
+  }
+  
+  .locations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .location {
+    width: 45%;
+    padding: 20px;
     margin-bottom: 20px;
-}
-
-#sucursales ul {
-    list-style: none;
-    padding: 0;
-}
-
-#sucursales li {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-/* Contacto estilos */
-#contacto {
-    background-color: #462f27;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .location:hover {
+    transform: scale(1.05);
+  }
+  
+  .location i {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: #8f1e3a;
+  }
+  
+  .location h3 {
+    color: #333;
+    font-size: 24px;
+    margin-top: 0;
+  }
+  
+  .location p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .whatsapp-link {
+    display: inline-block;
+    background-color: #25d366;
     color: #fff;
-    padding: 50px 0;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .whatsapp-link:hover {
+    background-color: #128c7e;
+  }
+  
+  .google-map {
+    margin-top: 40px;
+  }
+  
+  /* Estilos específicos para pantallas más pequeñas */
+  @media screen and (max-width: 768px) {
+    .location {
+      width: 100%;
+    }
+  }
+  
+/* Estilos Mejorados para la Sección de Contacto */
+#contacto {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+  }
+  
+  .contact-section {
     text-align: center;
-}
-
-#contacto h2 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-#contacto form {
+  }
+  
+  .contact-form,
+  .job-application-form,
+  .job-inquiry-form {
     max-width: 600px;
     margin: 0 auto;
-}
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form label,
+  .job-application-form label,
+  .job-inquiry-form label,
+  .job-application-form h3,
+  .job-inquiry-form h3 {
+    display: block;
+    margin-bottom: 12px;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea,
+  .job-application-form select,
+  .job-application-form input,
+  .job-inquiry-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  .contact-form button,
+  .job-application-form button,
+  .job-inquiry-form button {
+    background-color: #8f1e3a;
+    color: #fff;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .contact-form button:hover,
+  .job-application-form button:hover,
+  .job-inquiry-form button:hover {
+    background-color: #5a1325;
+  }
+  
 
-#contacto label {
+  /* Estilos para la sección de blog */
+.blog-section {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+  }
+  
+  .blog-posts {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .blog-post {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .blog-post:hover {
+    transform: scale(1.05);
+  }
+  
+  .blog-post img {
+    width: 20%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    border-bottom: 2px solid #e0e0e0;
+  }
+  
+  .blog-post h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 15px 20px;
+  }
+  
+  .blog-post p {
+    color: #666;
+    margin: 0 20px 15px;
+  }
+  
+  .cta-button {
+    display: block;
+    background-color: #8f1e3a;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 0 20px 20px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .cta-button:hover {
+    background-color: #6c1630;
+  }
+
+  /* Estilos para la sección de eventos especiales */
+.eventos-section {
+    background-color: #55a585;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .eventos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .evento {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .evento:hover {
+    transform: scale(1.05);
+  }
+  
+  .evento img {
+    margin-top: 10px;
+    width: 10%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border-bottom: 2px solid #e0e0e0;
+  }
+  
+  .evento h3 {
+    font-size: 1.5rem;
+  }
+  
+  .evento p {
+    color: #333;
+    margin: 0 20px 15px;
+  }
+  
+  /* ... (otros estilos) ... */
+  
+
+  /* Estilos para la sección de redes sociales */
+.redes-section {
+    background-color: #8f1e3a;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .redes-feed {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .red-social {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .red-social a {
+    font-size: 44px;
+  }
+
+  .red-social a:hover {
+    color: #128c7e;
+  }
+  
+  .red-social:hover {
+    transform: scale(1.05);
+  }
+  
+  .red-social img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 20px 0;
+  }
+  
+  .facebook-feed {
+    padding: 20px;
+  }
+  
+  .facebook-post {
+    margin-bottom: 20px;
+  }
+  
+  .facebook-post img {
+    width: 30%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .facebook-post p {
+    color: #333;
+    margin: 0;
+  }
+  
+  /* ... (otros estilos) ... */
+  
+  /* Estilos para la sección de cotización */
+.cotizacion-section {
+    background-color: #55a585;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .cotizacion-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .cotizacion-form label {
     display: block;
     margin-bottom: 10px;
-    font-size: 18px;
-}
-
-#contacto input,
-#contacto textarea {
+    font-weight: bold;
+  }
+  
+  .cotizacion-form input,
+  .cotizacion-form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    font-size: 16px;
-}
-
-#contacto button {
-    background-color: #ffff6a;
-    color: #462f27;
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-}
-
-#contacto button:hover {
+    box-sizing: border-box;
+  }
+  
+  .cta-button {
+    display: block;
     background-color: #8f1e3a;
-}
-
-.informacion-contacto {
-    margin-top: 30px;
-}
-
-.informacion-contacto p {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-/* Footer estilos */
-footer {
-    background-color: #462f27;
     color: #fff;
-    padding: 30px 0;
     text-align: center;
-}
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .cta-button:hover {
+    background-color: #6c1630;
+  }
+  
+  /* ... (otros estilos) ... */
 
-.iconos a {
-    display: inline-block;
-    margin: 0 15px;
-}
+  /* Estilos para la sección de preguntas frecuentes */
+.faq-section {
+    background-color: #fff;
+    color: #333;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .preguntas {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .pregunta {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  
+  .pregunta h3 {
+    color: #8f1e3a;
+  }
+  
+  /* ... (otros estilos) ... */
 
-.iconos img {
-    width: 40px;
-    height: 40px;
-}
-
-.informacion-adicional {
-    margin-top: 20px;
-}
-
-.informacion-adicional p {
+  /* Estilos para la sección de ofertas y descuentos exclusivos */
+.ofertas-section {
+    background-color: #8f1e3a;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .registro-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .registro-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .registro-form input,
+  .registro-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  
+  .cta-button {
+    display: block;
+    background-color: #fff;
+    color: #8f1e3a;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .cta-button:hover {
+    background-color: #6c1630;
+    color: #fff;
+  }
+  
+  /* ... (otros estilos) ... */
+  
+  
+  /* Footer */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 60px 0;
+  }
+  
+  .footer-top, .footer-middle, .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-logo {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .footer-info p {
+    margin-bottom: 15px;
+  }
+  
+  .footer-links {
+    margin-bottom: 30px;
+  }
+  
+  .footer-links h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #8f1e3a;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
     font-size: 18px;
-    margin: 10px 0;
-}
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #55a585;
+  }
+  
+  .footer-bottom p {
+    text-align: center;
+    font-size: 16px;
+  }
 
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav {
-        margin-top: 10px;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav li {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .iconos a {
-        margin: 0 10px;
-    }
-}
+  /* Personalización de la Scrollbar */
+body::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #8f1e3a;
+    border-radius: 10px;
+  }
+  
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: #55a585;
+  }
+  
